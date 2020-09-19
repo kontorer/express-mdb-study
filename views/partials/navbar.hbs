@@ -3,8 +3,19 @@
     <a href="/" class="brand-logo">Groceries</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
 
+      {{#if isIndex}}
+      <li class="active"><a href="/">Grocery List</a></li>
+      {{else}}
       <li><a href="/">Grocery List</a></li>
-      <li><a href="/create">Create</a></li>
+      {{/if}}
+
+
+      {{#if isCreate}}
+      <li class="active"><a href="/add">Create</a></li>
+      {{else}}
+      <li><a href="/add">Add Item</a></li>
+      {{/if}}
+
 
     </ul>
   </div>

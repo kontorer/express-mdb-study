@@ -1,0 +1,26 @@
+.item {
+	margin-bottom: 1rem;
+}
+
+.item span.completed {
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+.item label {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	background-color: #f3f3f3;
+	padding: 1rem;
+}
+
+.item i {
+	z-index: 2;
+}
+
+.nav-wrapper {
+	padding-left: 15px;
+}

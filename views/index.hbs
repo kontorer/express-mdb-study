@@ -1,1 +1,28 @@
-<h1>Index page</h1>
+<h1>Grocery List</h1>
+
+{{#if groceries.length}}
+<ul>
+	{{#each groceries}}
+	<li class="item">
+		<form action="complete" method='POST'>
+			<label>
+				{{#if completed}}			
+					<input type="checkbox" checked name="completed">
+					<span class="completed">{{title}}</span>
+				{{else}}
+					<input type="checkbox" name="completed">
+					<span>{{title}}</span>
+				{{/if}}
+
+				<input type="hidden" name="id" value={{_id}}>
+
+				<button class="btn btn-small" type="submit">Save</button>
+			</form>
+		</label>
+	</li>
+	{{/each}}
+</ul>
+{{else}}
+<p>No groceries in list...</p>
+
+{{/if}}
